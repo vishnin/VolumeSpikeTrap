@@ -35,12 +35,15 @@ VolumeSpikeTrap is a smart contract that tracks a decrease in balance by more th
 ## Compile & Setup
 
 1. ## Compile Contracts via Foundry 
+
 ```
 forge create --rpc-url https://ethereum-hoodi-rpc.publicnode.com --broadcast --private-key 0xPRIVATE_KEY src/VolumeSpikeTrap.sol:VolumeSpikeTrap
 ```
+
 ```
 forge create --rpc-url https://ethereum-hoodi-rpc.publicnode.com --broadcast --private-key 0xPRIVATE_KEY src/LogAlertReceiver.sol:LogAlertReceiver
 ```
+
 2. ## Update drosera.toml 
 ```
 [traps.mytrap]
@@ -76,6 +79,7 @@ DROSERA_PRIVATE_KEY=0x... drosera apply
 Author: Cryptotransparent
 
 Created: 28 July 2025
+
 
 
 
