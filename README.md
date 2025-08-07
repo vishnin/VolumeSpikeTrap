@@ -39,11 +39,13 @@ VolumeSpikeTrap is a smart contract that tracks a decrease in balance by more th
 forge create src/VolumeSpikeTrap.sol:VolumeSpikeTrap \
   --rpc-url https://ethereum-hoodi-rpc.publicnode.com \
   --private-key 0x...
+  --broadcast 
 ```
 ```
 forge create src/LogAlertReceiver.sol:LogAlertReceiver \
   --rpc-url https://ethereum-hoodi-rpc.publicnode.com \
   --private-key 0x...
+  --broadcast
 ```
 2. ## Update drosera.toml 
 ```
@@ -62,7 +64,7 @@ DROSERA_PRIVATE_KEY=0x... drosera apply
 ## Test the Trap
 
 - Send more than the specified balance reduction threshold ETH from target address on Ethereum Hoodi testnet.
-- Wait 1–3 blocks.
+- Wait 1â€“3 blocks.
 - In the Drosera dashboard, check that shouldRespond = true.
 
 ---
@@ -80,4 +82,5 @@ DROSERA_PRIVATE_KEY=0x... drosera apply
 Author: Cryptotransparent
 
 Created: 28 July 2025
+
 
